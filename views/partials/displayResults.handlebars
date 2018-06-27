@@ -1,0 +1,31 @@
+
+<div class="container table-responsive">
+
+{{#if results}}
+  <table id="mst3k_characterTable" class="table table-hover table-condensed">
+  <thead>
+    {{#each keys}}
+        <th>{{this}}</th>
+    {{/each}}
+  </thead>
+
+  {{#each results}}
+    <tr id="row{{id}}">
+      {{#each this}}
+        <td class="{{@key}}">{{this}}</td>
+      {{/each}}
+      <td class="edit-buttons text-right">
+      </td>
+    </tr>
+  {{/each}}
+  </table>
+{{/if}}
+
+{{#if error}}
+    <hr>
+  <div class="container-fluid text-center alert alert-warning">
+    <h1 class="warning">{{error}}</h1>
+  </div>
+{{/if}}
+
+</div>

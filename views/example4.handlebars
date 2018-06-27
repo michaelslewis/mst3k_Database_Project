@@ -1,0 +1,25 @@
+{{> header}}
+
+<div class="container-fluid text-center">
+  <h1>Display the title and synopsis for any movie screened in an episode where an actor who appeared has a first name that contains the letter 'y' or a last name that contains the letter 'w'; ordered by ascending movie title:</h1>
+  <br>
+</div>
+<div class="container-fluid col-md-offset-3">
+  <div class="codeExample">
+  	<code>SELECT DISTINCT movie.title, movie.synopsis FROM movie</code>
+  	<br>
+    <code>INNER JOIN episode ON movie.id = episode.movie_id</code>
+    <br>
+    <code>INNER JOIN actor_episode ON episode.id = actor_episode.episode_id</code>
+    <br>
+    <code>INNER JOIN actor ON actor_episode.actor_id = actor.id</code>
+    <br>
+    <code>WHERE actor.fname like "%y%" OR actor.lname like "%w%"</code>
+    <br>
+    <code>ORDER BY movie.title ASC</code>
+
+  </div>
+</div>
+<br>
+
+{{> displayResults}}

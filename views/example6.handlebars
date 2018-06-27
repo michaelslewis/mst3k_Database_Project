@@ -1,0 +1,24 @@
+{{> header}}
+
+<div class="container-fluid text-center">
+  <h1>Display the link to the MST3K Wikia page for any actor who appeared in an episode where a character of type 'Gorilla' appeared:</h1>
+  <br>
+</div>
+<div class="container-fluid col-md-offset-3">
+  <div class="codeExample">
+    <code>SELECT DISTINCT actor.wikia FROM actor</code>
+    <br>
+    <code>INNER JOIN actor_episode ON actor.id = actor_episode.actor_id</code>
+    <br>
+    <code>INNER JOIN episode ON actor_episode.episode_id = episode.id</code>
+  	<br>
+    <code>INNER JOIN character_episode ON episode.id = character_episode.character_id</code>
+    <br>
+    <code>INNER JOIN mst3k_character ON character_episode.character_id = mst3k_character.id</code>
+    <br>
+    <code>WHERE mst3k_character.type = "Gorilla"</code>
+  </div>
+</div>
+<br>
+
+{{> displayResults}}

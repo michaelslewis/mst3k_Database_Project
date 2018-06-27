@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="{{#if active.home}}active{{/if}}"><a href="/">Welcome Page</a></li>
+        <li style="margin-top: 0; margin-bottom: 0; margin-left: 3em; margin-right: 1em;">&nbsp;</li>
+        <li style="position: relative; padding-top: 15px; padding-right: 3em; font-weight: bold;">Parent Tables:</li>
+        <li class="{{#if active.episode}}active{{/if}}"><a href="/episode">Episode</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.mst3k_character}}active{{/if}}"><a href="/mst3k_character">Character</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.actor}}active{{/if}}"><a href="/actor">Actor</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.movie}}active{{/if}}"><a href="/movie">Movie</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.genre}}active{{/if}}"><a href="/genre">Genre</a></li>
+        <br>
+        <li style="margin-top: 0; margin-bottom: 0; margin-left: 12em; margin-right: 1em;">&nbsp;</li>
+        <li style="position: relative; padding-top: 15px; padding-right: 3.6em; font-weight: bold;">Child Tables:</li>
+        <li class="{{#if active.character_episode}}active{{/if}}"><a href="/character_episode">Character-Episode</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.actor_episode}}active{{/if}}"><a href="/actor_episode">Actor-Episode</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.actor_character}}active{{/if}}"><a href="/actor_character">Actor-Character</a></li>
+        <br>
+        <li style="margin-top: 0; margin-bottom: 0; margin-left: 12em; margin-right: 1em;">&nbsp;</li>
+        <li style="position: relative; padding-top: 15px; padding-right: 1.6em; font-weight: bold;">Example Queries:</li>
+        <li class="{{#if active.example1}}active{{/if}}"><a href="/example1">Ex. #1</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.example2}}active{{/if}}"><a href="/example2">Ex. #2</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.example3}}active{{/if}}"><a href="/example3">Ex. #3</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.example4}}active{{/if}}"><a href="/example4">Ex. #4</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.example5}}active{{/if}}"><a href="/example5">Ex. #5</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+        <li class="{{#if active.example6}}active{{/if}}"><a href="/example6">Ex. #6</a></li>
+        <li style="margin: 0 .25em">&nbsp;</li>
+      </ul>
+    </div>
+  </div>
+</nav>

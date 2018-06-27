@@ -1,0 +1,20 @@
+{{> header}}
+
+<div class="container-fluid text-center">
+  <h1>Search for names of characters who appeared in the episode 'The Crawling Eye':</h1>
+  <br>
+</div>
+<div class="container-fluid col-md-offset-3">
+  <div class="codeExample">
+  	<code>SELECT mst3k_character.fname, mst3k_character.lname FROM mst3k_character</code>
+  	<br>
+    <code>INNER JOIN character_episode ON mst3k_character.id = character_episode.character_id</code>
+    <br>
+    <code>INNER JOIN episode ON episode.id = character_episode.episode_id</code>
+    <br>
+    <code>WHERE episode.title = "The Crawling Eye"</code>
+  </div>
+</div>
+<br>
+
+{{> displayResults}}
